@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Kider - Preschool Website Template</title>
+    <title>Kidos - Preschool </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+     <link href="img/favicon-32x32.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,28 +47,32 @@
             <a href="index.html" class="navbar-brand">
                 <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kider</h1>
             </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler" data-bs-toggle="nocollapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link active">About Us</a>
-                    <a href="classes.html" class="nav-item nav-link">Classes</a>
+                    <a href="classes.html" class="nav-item nav-link ">Classes</a>
+                    <a href="call-to-action.html" class="nav-item nav-link">Career</a>
+                    
+                   
+
+
+                   
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">For Parents</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">School Facilities</a>
-                            <a href="team.html" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action.html" class="dropdown-item">Become A Teachers</a>
-                            <a href="appointment.html" class="dropdown-item">Make Appointment</a>
+                            
+                            <a href="team.html" class="dropdown-item">Our Teachers</a>
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
+                           
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="appointement.html" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Schedule A Demo<i class="fa fa-noarrow-right ms-3"></i></a>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -79,28 +83,142 @@
             <div class="container py-5">
                 <h1 class="display-2 text-white animated slideInDown mb-4">About Us</h1>
                 <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb">
+                   <!-- <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Pages</a></li>
                         <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
-                    </ol>
+                    </ol>-->
                 </nav>
             </div>
         </div>
         <!-- Page Header End -->
+        
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .left-section {
+            flex: 1;
+            padding: 20px;
+        }
+        .right-section {
+            flex: 1;
+            padding: 20px;
+            text-align: justify;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+        <style>
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+  }
+  .button-container .button {
+    margin: 0 10px; /* Adjust the spacing between buttons */
+    width: 75px; /* Set button width */
+    height: 75px; /* Set button height */
+    border-radius: 50%; /* Makes the button circular */
+    background-color: #007bff; /* Blue color, change as needed */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border: 2;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-container .button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  .button-container .button:hover:before {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+  .button-container .button:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<div class="button-container">
+  <a href="leagcy.html" class="button">Legacy</a>
+  <a href="vision.html" class="button">Vision</a>
+  <a href="mission.html" class="button">Mission</a>
+</div>
 
 
+
+   <!--   <h2 style='text-align: center;'>OUR MISSION</h2>
+    <div class='container'font='Berlin Sans FB'>
+        <div class='left-section'>
+             <div style="width: 350px; height: 350px; border-radius: 80%; overflow: hidden;">
+        <img alt="Company Image" src="https://source.unsplash.com/gYdjZzXNWlg" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+        </div>
+        <div class='right-section'>
+            
+            <p>Our mission is to empower students to become lifelong learners, critical thinkers, and compassionate global citizens.</p>
+       <p> Through a commitment to academic excellence, innovation, and inclusivity, we strive to cultivate a nurturing environment where every student can thrive academically, socially, and emotionally. </p>
+       <p> Our mission is to inspire curiosity, foster creativity, and instill a sense of responsibility towards oneself and the community, preparing students to make meaningful contributions to an ever-changing world</p>
+    
+        </div>
+      
+    </div>
+  <h2 style='text-align: center;'>OUR VISSION</h2>
+    <div class='container'>
+       
+        <div class='left-section'font='Cambria'>
+            
+            <p> We see a school that serves as a beacon of educational excellence, innovation, and inclusivity. </p>
+             <p>  We envision a nurturing environment where every student is empowered to reach their fullest potential, equipped with the knowledge, skills, and values to succeed in a diverse and rapidly evolving world. </p>
+             <p>  Our vision encompasses fostering a culture of collaboration, curiosity, and lifelong learning, where students are inspired to embrace challenges, celebrate diversity, and make positive contributions to society.</p>
+             <p>  Through a shared commitment to academic rigor, character development, and community engagement, our school aspires to be a catalyst for positive change, shaping leaders who will inspire others and leave a lasting legacy of excellence. </p>
+      
+        </div>
+       <div class='right-section'>
+             <div style="width: 350px; height: 350px; border-radius: 80%; overflow: hidden;">
+        <img alt="Company Image" src="https://source.unsplash.com/gYdjZzXNWlg" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+        </div>
+    </div>-->
         <!-- About Start -->
-        <div class="container-xxl py-5">
+             <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos, ipsum labore duo duo sit no sea diam. Et dolor et kasd ea. Eirmod diam at dolor est vero nonumy magna.</p>
+                        <p>Dive deeper into our enriching educational journey by exploring the breadth and depth of our academic programs, extracurricular activities, and community engagements. With a focus on holistic development, we offer a diverse array of cultural activities that celebrate the rich tapestry of traditions and experiences within our school community.</p>
+                        <p class="mb-4">From multicultural festivals to art exhibitions, music performances, and literary events, our cultural activities provide students with opportunities to cultivate empathy, respect, and appreciation for diverse perspectives.</p>
                         <div class="row g-4 align-items-center">
                             <div class="col-sm-6">
-                                <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
+                                <a class="btn btn-primary rounded-pill py-3 px-5" href="about.html">Read More</a>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
@@ -133,7 +251,7 @@
 
 
         <!-- Call To Action Start -->
-        <div class="container-xxl py-5">
+       <div class="container-xxl py-5">
             <div class="container">
                 <div class="bg-light rounded">
                     <div class="row g-0">
@@ -145,15 +263,14 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4">Become A Teacher</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
-                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                                </p>
-                                <a class="btn btn-primary py-3 px-5" href="">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
+                                <p class="mb-4">Pave the path to molding young minds and shaping futures through the fulfilling form to becoming a teacher.</p>
+                                <a class="btn btn-primary py-3 px-5" href="call-to-action.html">Get Started Now<i class="fa fa-fillform"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <!-- Call To Action End -->
 
@@ -162,17 +279,16 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Popular Teachers</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
-                        eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <h1 class="mb-3">Our Teachers</h1>
+                    <p>"Meet the heart of our institution: our dedicated and passionate teachers."</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item position-relative">
                             <img class="img-fluid rounded-circle w-75" src="img/team-1.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
+                                  <h3>Ms. Jessica</h3>
+                                <p>Teacher</p>
                                 <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -185,8 +301,8 @@
                         <div class="team-item position-relative">
                             <img class="img-fluid rounded-circle w-75" src="img/team-2.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
+                                <h3>Mr. Michael</h3>
+                                <p>Teacher</p>
                                 <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -199,8 +315,8 @@
                         <div class="team-item position-relative">
                             <img class="img-fluid rounded-circle w-75" src="img/team-3.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
+                                  <h3>Mr. David</h3>
+                                <p>Teacher</p>
                                 <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -216,14 +332,14 @@
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+ <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>admin@kidos.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -263,9 +379,9 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                         <form id="contactForm-2">
+                        <h3 class="text-white mb-4">Subscribe Me</h3>
+                        <p>Your Subscription gives power to Us.</p>
+                 <form id="contactForm-2">
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" name="Email:" type="text" placeholder="Your email">
                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">submit</button>
@@ -298,17 +414,17 @@
         // You can also display a success message or redirect the user to a thank-you page
     });
 </script>
-           
                 </div>
             </div>
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">kidos</a>, All Right Reserved. 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+							Designed By <a class="border-bottom" href="https://www.kwaga.in/#homer">KWAGA Team</a>
+                           Distributed By: <a class="border-bottom" href="https://www.kwaga.in/#homer" target="_blank">Kwaga</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
