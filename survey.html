@@ -110,26 +110,26 @@ h1{
  <div class="form-row">
     <div class="col">
       <label id="name-label">First Name</label>
-      <input id="name" type="name" class="form-control" placeholder="First name" required>
+      <input id="name" type="name" name="Name"  class="form-control" placeholder="First name" required>
     </div>
     <div class="col">
       <label for="formGroupExampleInput">Last Name</label>
-      <input id="last-name" type="name" class="form-control" placeholder="Last name" required>
+      <input id="last-name" type="name" name="last-name" class="form-control" placeholder="Last name" required>
     </div>
   </div>
   <br/>
   <div class="form-group">
     <label id="email-label">Email address</label>
-    <input id="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <input id="email" type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email" required>
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
-    <label id="number-label">Your age</label>
-    <input id="number" type="number" min="15" max="125" class="form-control" id="number" placeholder="Age" required>
+    <label id="number-label" >Your age</label>
+    <input id="number" type="number" name="Age"min="15" max="125" class="form-control" id="number" placeholder="Age" required>
   </div>
  <div class="form-group">
     <label id="number-label">Child's Age</label>
-    <input id="number" type="number" min="15" max="125" class="form-control" id="number" placeholder="Age" required>
+    <input id="number" type="number" name="Age" min="1" max="125" class="form-control" id="number" placeholder="Age" required>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Qualification</label>
@@ -154,20 +154,20 @@ h1{
   <p>What's your child's favorite school subject?</p>
     <ul style="list-style: none;">
      
- <li class="radio"><label> <input name="radio-buttons" value="3" type="radio" class="userRatings">Sports</label></li>
-  <li class="radio"><label> <input name="radio-buttons" value="3" type="radio" class="userRatings">Music</label></li>
-  <li class="radio"><label> <input name="radio-buttons" value="3" type="radio" class="userRatings">Dance</label></li>
-  <li class="radio"><label> <input name="radio-buttons" value="3" type="radio" class="userRatings">Art and Crafts</label></li>
-  <li class="radio"><label> <input name="radio-buttons" value="3" type="radio" class="userRatings">Reading</label></li>
+ <li class="radio"><label> <input name="favorite school subject" value="3" type="Sports" class="userRatings">Sports</label></li>
+  <li class="radio"><label> <input name="favorite school subject" value="3" type="Music" class="userRatings">Music</label></li>
+  <li class="radio"><label> <input name="favorite school subject" value="3" type="Dance" class="userRatings">Dance</label></li>
+  <li class="radio"><label> <input name="favorite school subject" value="3" type="Art and Crafts" class="userRatings">Art and Crafts</label></li>
+  <li class="radio"><label> <input name="favorite school subject" value="3" type="Reading" class="userRatings">Reading</label></li>
     </ul>
   </div>
  <div>
   <p >What extracurricular activities does your child enjoy?</p><ul class="checkboxlabel">
-    <li class="checkbox" style="list-style: none;"><label> <input name="prefer" value="1" type="checkbox" class="userRatings">Math</label></li>
-  <li class="checkbox" style="list-style: none;"><label> <input name="prefer" value="1" type="checkbox" class="userRatings">Science</label></li>
-  <li class="checkbox" style="list-style: none;"><label> <input name="prefer" value="1" type="checkbox" class="userRatings">English</label></li>
-  <li class="checkbox" style="list-style: none;"><label> <input name="prefer" value="1" type="checkbox" class="userRatings">History</label></li>
-  <li class="checkbox" style="list-style: none;"><label> <input name="prefer" value="1" type="checkbox" class="userRatings">Arts</label></li>
+    <li class="checkbox" style="list-style: none;"><label> <input name="extracurricular activities" value="Math" type="checkbox" class="userRatings">Math</label></li>
+  <li class="checkbox" style="list-style: none;"><label> <input name="extracurricular activities" value="Science" type="checkbox" class="userRatings">Science</label></li>
+  <li class="checkbox" style="list-style: none;"><label> <input name="extracurricular activities" value="English" type="checkbox" class="userRatings">English</label></li>
+  <li class="checkbox" style="list-style: none;"><label> <input name="extracurricular activities" value="History" type="checkbox" class="userRatings">History</label></li>
+  <li class="checkbox" style="list-style: none;"><label> <input name="extracurricular activities" value="Arts" type="checkbox" class="userRatings">Arts</label></li>
     </ul>
   </div>
   <div class="message">
@@ -182,7 +182,7 @@ h1{
   <div>
    <script>
     // JavaScript to handle form submission
-    document.getElementById("contactForm-2").addEventListener("submit", function(event) {
+    document.getElementById("survey-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
 
         const formData = new FormData(event.target);
