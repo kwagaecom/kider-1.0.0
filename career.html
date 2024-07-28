@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kidos - Preschool </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon-32x32.png" rel="icon">
+    <link href="img/favicon-16x16.png" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+       <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kidos</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="nocollapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                      <a href="about.html" class="nav-item nav-link">AboutUs</a>
+                    <a href="classes.html" class="nav-item nav-link active">Classes</a>
+                    <a href="call-to-action.html" class="nav-item nav-link">Career</a>
+                   
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <a href="appointement.html" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Schedule A Demo<i class="fa fa-noarrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Page Header End -->
+<style>
+/* CSS Reset */
+html, body, div, header, main, section, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: #232020;
+}
+
+html, body, input, fieldset, legend, label, select, option, textarea, button {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #232020;
+    background-image: -webkit-linear-gradient(270deg, #f4f4f4, #f4f4f4 65%, #232020 65%);
+    background-image: -moz-linear-gradient(270deg, #f4f4f4, #f4f4f4 65%, #232020 65%);
+    background-image: linear-gradient(270deg, #f4f4f4, #f4f4f4 65%, #232020 65%);
+    font-size: 16px;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {    
+    line-height: 1.4em;
+    text-align: left;
+    color: transparent; /* hiding <p> text */
+}
+
+#description {
+    padding-left: 4px;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    line-height: 2.1em;
+}
+
+fieldset {
+    border: 0;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 0.8fr minmax(50vw, 2.2fr) 1.5fr 0.3fr;
+    grid-template-rows: minmax(50px, 80px) auto;
+    grid-template-areas: 
+        'empty empty empty empty'
+        'still-empty main-content-col title-col right-empty';
+    gap: 1.6em;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+#header {
+    grid-area: title-col;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#survey-form {
+    border-radius: 5px;
+    background-color: #ff7315;
+    color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.8);
+    grid-area: main-content-col;    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        'row-heading row-heading'
+        'row-2-left row-2-right'
+        'row-3-left row-3-right'
+        'row-4-left row-4-right'
+        'row-textarea row-textarea'
+        'row-button row-button';
+    grid-gap: 1em;
+    justify-items: space-around;
+    align-content: start;
+}
+
+input[type='text'], input[type='email'], input[type='number'], select, textarea {
+    border-radius: 5px;        
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #232020;
+    border: 0;
+    padding: 1.7%;
+    width: 96.2%;
+    box-shadow: inset 0 0 7px 0 rgba(17, 17, 17, 0.6);
+}
+
+input[type='radio'], input[type='checkbox'] {
+    min-width: 2em;
+    min-height: 2em;
+    vertical-align: top;
+}
+
+#textarea-comment-field-label {
+    grid-area: row-textarea;
+    resize: none;
+}
+
+select {
+    width: 99.6% !important;
+    align-self: end;
+}
+
+button { 
+    grid-area: row-button;   
+    background-color: #232020;
+    color: #f4f4f4;
+    font-size: 16px;
+    border: 0;
+    padding: 0.6em 0;
+    box-shadow: 0 5px 5px -2px rgba(17, 17, 17, 0.7);
+}
+
+#form-header {
+    grid-area: row-heading;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+@media (max-width: 1450px) {    
+
+    #main {
+        grid-template-columns: 0.8fr minmax(60vw, 2.2fr) 1.5fr 0.3fr;
+    }
+
+}
+
+@media (min-width: 991px) and (max-width: 1181px) {    
+
+    #main {
+        grid-template-columns: 0.5fr minmax(71vw, 2.5fr) 0.9fr 0.2fr;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 991px), (orientation: portrait) {
+
+    #main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(30px, 50px) repeat(2, auto);
+        grid-template-areas: 
+            'empty'
+            'title-col'
+            'main-content-col';
+        gap: 1.6em;
+        justify-items: stretch;
+        align-items: stretch;
+        margin-bottom: 30px;
+    } 
+
+    body {
+        background-image: none;
+    }
+    input[type='text'], input[type='email'], input[type='number'], select, textarea, button, body, legend, label {
+        font-size: 14.5px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h1, h3, h4, h5, h6 {
+        text-align: center;
+        color: #f4f4f4;
+    }
+
+    #header {
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #survey-form {        
+        padding: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'row-heading'
+            'row-2-left'
+            'row-2-right'
+            'row-3-left'
+            'row-3-right'
+            'row-4-left'
+            'row-4-right'
+            'row-textarea'
+            'row-button';
+    }
+
+    fieldset {
+        margin-left: 0;
+        padding-left: 3px;
+    }
+
+    input[type='radio'], input[type='checkbox'] {
+        min-width: 1.8em;
+        min-height: 1.8em;
+        vertical-align: top;
+    }
+
+}
+</style>
+<main id="main">
+
+        <header id="header">
+
+            
+            <p id="description">Please fill the career survey form</p>
+
+        </header>
+
+            <form id="survey-form" action="">
+
+                <!-- Form Header -->
+                <h2 id="form-header">Career Form</h2>
+
+                <label id="name-label" for="name">Name: <input id="name" name="Name" type="text" placeholder="Full name" title="Enter your full name" required></label>
+
+                <label id="email-label" for="email">Email: <input id="email" name="Email" type="email" placeholder="Email address" title="Enter your email address" required></label>
+
+                <label id="number-label" for="Age">Age: <input id="Age" type="number" name="Age"  placeholder="Age" title="Enter Your Age"></label>
+               
+
+                <label id="Resume-label" for="Resume">Resume Link: <input id="Resume link" type="text" name="Resume link" placeholder="Resume link" ></label>
+
+                <label id="dropdown-label" for="dropdown">Job Title: 
+                    <select name="job-title" id="dropdown">
+                        <option disabled selected value>Please select your job title</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Head Teacher">Head Teacher</option>
+                        <option value="Principal">Principal</option>
+                       
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+
+                <!-- Radio buttons to select career level -->
+                <fieldset id="career-fieldset">
+
+                    <legend id="career-legend">Please specify your current career level</legend>
+
+                    <label id="entry-level-label" for="entry-level"><input type="radio" name="career-level" id="entry-level" value="entry-level" checked> Entry level</label>
+
+                    <label id="mid-level-label" for="mid-level"><input type="radio" name="career-level" id="mid-level" value="mid-level"> Mid level</label>
+
+                    <label id="senior-level-label" for="senior-level"><input type="radio" name="career-level" id="senior-level" value="senior-level"> Senior level</label>
+
+                </fieldset>
+
+                <!-- Checkboxes to select skills -->
+                <fieldset id="skills-field-set">
+
+                    <legend id="skills-legend">Please select all the skills you have</legend>
+
+                    <label id="it-support-checkbox-label" for="it-support-checkbox"><input type="checkbox" name="skills" id="it-support-checkbox" value="Computer"> Computer</label>
+
+                    <label id="svr-ntwk-adm-checkbox-label" for="svr-ntwk-adm-checkbox"><input type="checkbox" name="skills" id="svr-ntwk-adm-checkbox" value="Hindi"> Hindi</label>
+
+                    <label id="app-dev-supp-checkbox-label" for="app-dev-supp-checkbox"><input type="checkbox" name="skills" id="app-dev-supp-checkbox" value="English"> English</label>
+
+                    <label id="web-dev-checkbox-label" for="web-dev-checkbox"><input type="checkbox" name="skills" id="web-dev-checkbox" value="Science"> Science</label>
+
+                    <label id="cloud-tech-checkbox-label" for="cloud-tech-checkbox"><input type="checkbox" name="skills" id="cloud-tech-checkbox" value="History"> History</label>
+
+                    <label id="it-sec-checkbox-label" for="it-sec-checkbox"><input type="checkbox" name="skills" id="it-sec-checkbox" value="it-sec-checkbox"> IT Security</label>
+
+                    <label id="it-mgmt-checkbox-label" for="it-mgmt-checkbox"><input type="checkbox" name="skills" id="it-mgmt-checkbox" value="it-mgmt-checkbox"> IT Process Management</label>
+
+                    <label id="other-checkbox-label" for="other-checkbox"><input type="checkbox" name="skills" id="other-checkbox" value="other-checkbox"> Other</label>
+
+                </fieldset>
+
+                <!-- Textarea for comments -->
+                
+
+                <!-- Submit user input -->
+                <button type="submit" id="submit">Submit</button>
+
+            </form>
+
+    </main>
+
+ <script>
+    // JavaScript to handle form submission
+    document.getElementById("survey-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(event.target);
+        const email = 'kwagaecom@gmail.com'; // Your Gmail address
+        const subject = 'Job Details Submission'; // Subject for the email
+
+        let message = "	Job Details:\n\n";
+
+        // Iterate over form data and append to message
+        for (const [key, value] of formData.entries()) {
+            message += `${key}: ${value}\n`;
+        }
+
+        // Create a "mailto" URL with the pre-filled email subject and body
+        const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+        // Open the default email client with the pre-filled email
+        window.location.href = mailtoURL;
+
+        // You can also display a success message or redirect the user to a thank-you page
+    });
+</script>
+                </div>
+            </div>
+         
+        <!-- Footer End -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Quick Links</h3>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Photo Gallery</h3>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <h3 class="text-white mb-4">Subscribe Me</h3>
+                        <p>Your Subscription gives power to Us.</p>
+                                 <form id="contactForm-2">
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" name="Email:" type="text" placeholder="Your email">
+                           <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">submit</button>
+                              </div>
+</form>
+
+
+ <script>
+    // JavaScript to handle form submission
+    document.getElementById("contactForm-2").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(event.target);
+        const email = 'kwagaecom@gmail.com'; // Your Gmail address
+        const subject = 'Subscriber Email Submission'; // Subject for the email
+
+        let message = "Subscriber Details:\n\n";
+
+        // Iterate over form data and append to message
+        for (const [key, value] of formData.entries()) {
+            message += `${key}: ${value}\n`;
+        }
+
+        // Create a "mailto" URL with the pre-filled email subject and body
+        const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+        // Open the default email client with the pre-filled email
+        window.location.href = mailtoURL;
+
+        // You can also display a success message or redirect the user to a thank-you page
+    });
+</script>
+                </div>
+            </div>
+              <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">kidos</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://www.kwaga.in/#homer">KWAGA Team</a>
+                           Distributed By: <a class="border-bottom" href="https://www.kwaga.in/#homer" target="_blank">Kwaga</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
