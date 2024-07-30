@@ -9,8 +9,9 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-      <link href="img/favicon-32x32.png" rel="icon">
+     <link href="img/favicon-32x32.png" rel="icon">
     <link href="img/favicon-16x16.png" rel="icon">
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,258 +44,242 @@
 
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand">
                 <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kidos</h1>
             </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler" data-bs-toggle="nocollapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About Us</a>
-                    <a href="classes.html" class="nav-item nav-link">Classes</a>
-                    <a href="appoitement.html" class="nav-item nav-link">Appoitement</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                      <a href="about.html" class="nav-item nav-link">AboutUs</a>
+                    <a href="classes.html" class="nav-item nav-link ">Classes</a>
+                    <a href="call-to-action.html" class="nav-item nav-link ">Career</a>
+                   
+            
+
+
+                   
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">For Parents</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            
+                            <a href="team.html" class="dropdown-item">Our Teachers</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                           
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link ">Contact Us</a>
                 </div>
-                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="appointement.html" class="btn btn-primary rounded-pill px-3 d-none d-lg-block active">Schedule A Demo<i class="fa fa-noarrow-right ms-3"></i></a>
             </div>
         </nav>
         <!-- Navbar End -->
 
 
         <!-- Page Header End -->
+       
+        <!-- Page Header End -->
 
 
-        <!-- Appointment Start -->
-
+        <!-- Contact Start -->
 <style>
-    .group:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    .landing-page {
-        width: 100%;
-        max-width: 882px;
-        margin: 100px auto 0;
-        padding: 0 20px; /* Add padding for better mobile view */
-    }
-
-    .landing-page *,
-    .landing-page *:before,
-    .landing-page *:after {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    .landing-page .module {
-        border: 1px solid rgb(219, 219, 219);
-        border-radius: 4px;
-        float: left;
-        padding: 2em;
-        width: 48%;
-    }
-
-    .landing-page .module > *:last-child,
-    .landing-page .module > *:last-child > *:last-child,
-    .landing-page .module > *:last-child > *:last-child > *:last-child {
-        margin: 0;
-        padding: 0;
-    }
-
-    .landing-page .note {
-        background-color: rgb(236, 248, 236);
-        background-image: url("img/appointment.jpg");
-        border: 1px dashed;
-        border-radius: 4px;
-        color: rgb(115, 136, 96);
-        font-family: georgia;
-        font-size: 0.9em;
-        font-style: italic;
-        margin: 20px auto;
-        padding: 2em;
-    }
-
-    .form-appointment {
-        padding: 2em;
-        background: url('https://plus.unsplash.com/premium_photo-1663106423058-c5242333348c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGtpZHMlMjBzY2hvb2x8ZW58MHx8MHx8fDA%3D') no-repeat center center; /* Add your image URL here */
-        background-size: cover;
-        border-radius: 4px;
-        border: 1px solid rgb(130, 228, 130);
-        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
-        font-family: "PT Sans", Arial, sans-serif;
-        margin: 20px auto;
-    }
-
-    .form-appointment input[type="text"],
-    .form-appointment input[type="email"],
-    .form-appointment input[type="tel"],
-    .form-appointment textarea {
-        border: 1px solid rgb(153, 202, 129);
-        border-radius: 0.2em;
-        font-family: "PT Sans", Arial, sans-serif;
-        font-size: 1.1em;
-        padding: 0.4em 1em;
-        margin: 0 0 0.8em;
-        width: 100%;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.08) inset;
-    }
-
-    .form-appointment input[type="text"],
-    .form-appointment input[type="email"],
-    .form-appointment input[type="tel"],
-    .form-appointment input[type="submit"],
-    .form-appointment textarea {
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-    }
-
-    .form-appointment input[type="text"]:active,
-    .form-appointment input[type="text"]:focus,
-    .form-appointment input[type="email"]:active,
-    .form-appointment input[type="email"]:focus,
-    .form-appointment input[type="tel"]:active,
-    .form-appointment input[type="tel"]:focus,
-    .form-appointment textarea:active,
-    .form-appointment textarea:focus {
-        outline: 0;
-        box-shadow: 0 0 6px rgb(176, 226, 188);
-    }
-
-    .form-appointment textarea {
-        height: 160px;
-    }
-
-    .form-appointment input[type="submit"] {
-        background-color: rgb(118, 207, 118);
-        border: 1px solid rgb(134, 189, 134);
-        border-radius: 4px;
-        color: rgb(255, 255, 255);
-        cursor: pointer;
-        font-family: inherit;
-        font-size: 1.4em;
-        padding: 10px 18px;
-    }
-
-    .form-appointment input[type="submit"]:hover {
-        background-color: white;
-        color: rgb(118, 207, 118);
-    }
-
-    .form-appointment .wpcf7-list-item-label {
-        color: rgb(130, 178, 136);
-    }
-
-    span.wpcf7-list-item {
-        display: block;
-        margin-left: -0.02em;
-    }
-
-    .contact-info {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .contact-info .wpcf7-form-control-wrap {
-        flex: 1;
-    }
+  .calendar {
+    min-width: 375px;
+  }
+  .calendar td {
+    padding: 15px 0 !important;
+    min-width: 50px;
+  }
+  .calendar-wrap .btn-link {
+    color: #fff;
+  }
+  .calendar .btn-link {
+    color: #fff;
+    text-decoration: none !important;
+    border-radius: 50px;
+    min-width: 50px;
+  }
+  .calendar .btn-link:hover, .calendar .btn-link.active {
+    background-color: #6c757d;
+  }
 </style>
+<div class="container">
+  <h1 class="text-center mt-5 mb-5">Schedule a Meeting</h1>
+  <div class="card shadow border-0">
+    <div class="card-body p-0">
+      <div class="row">
+        <div class="col-md-6 p-5 bg-dark text-white">
+          <div class="text-center calendar-wrap">
+            <img src="https://en.gravatar.com/userimage/6173818/6755225af9bdc5d8880d3006067494b9.jpg?size=60" class="mx-auto rounded img-fluid" style="border-radius:50px !important;border:3px solid #fff;" alt="">
+            <h5 class="mt-3">Brandon from Hubbard Labs</h5>
+            <h5 style="margin:20px 0;">
+              <button class="btn btn-link"><i class="fa-solid fa-angle-left text-white"></i></button> June 
+              <button class="btn btn-link"><i class="fa-solid fa-angle-right"></i></button>
+            </h5>
+            <div class="table-responsive">
+              <table class="calendar table table-borderless align-middle text-center text-white">
+                <thead>
+                  <tr>
+                    <th>SUN</th>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><button class="btn btn-link disabled">26</button></td>
+                    <td><button class="btn btn-link disabled">27</button></td>
+                    <td><button class="btn btn-link disabled">28</button></td>
+                    <td><button class="btn btn-link disabled">29</button></td>
+                    <td><button class="btn btn-link disabled">30</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '1')">1</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '2')">2</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '3')">3</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '4')">4</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '5')">5</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '6')">6</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '7')">7</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '8')">8</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '9')">9</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '10')">10</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '11')">11</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '12')">12</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '13')">13</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '14')">14</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '15')">15</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '16')">16</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '17')">17</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '18')">18</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '19')">19</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '20')">20</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '21')">21</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '22')">22</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '23')">23</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '24')">24</button></td>
+                    <td><button class="btn btn-link active" onclick="selectDate(this, '25')">25</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '26')">26</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '27')">27</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '28')">28</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '29')">29</button></td>
+                    <td><button class="btn btn-link" onclick="selectDate(this, '30')">30</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-5">
+          <h5 class="card-title">How long do you need?</h5>
+          <div class="btn-group" style="width:100%" role="group" aria-label="">
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+            <label class="btn btn-outline-dark" for="vbtn-radio1">15 Minutes</label>
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+            <label class="btn btn-outline-dark" for="vbtn-radio2">30 Minutes</label>
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+            <label class="btn btn-outline-dark" for="vbtn-radio3">1 Hour</label>
+          </div>
+          <br /><br />
+          <h5 class="card-title">What time works best?</h5>
+          <select class="form-control select2">
+            <option>UTC -07:00 Pacific Time (US & Canada)</option>
+            <option>UTC -08:00 Arizona Time (US & Canada)</option>
+          </select>
+          <br /><br />
+          <div class="d-grid gap-2" style="overflow:scroll;max-height:500px;">
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '9:00 AM')">9:00 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '9:15 AM')">9:15 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '9:30 AM')">9:30 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '9:45 AM')">9:45 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '10:00 AM')">10:00 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '10:15 AM')">10:15 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '10:30 AM')">10:30 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '10:45 AM')">10:45 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '11:00 AM')">11:00 AM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '12:00 PM')">12:00 PM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '12:15 PM')">12:15 PM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '12:30 PM')">12:30 PM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '12:45 PM')">12:45 PM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '1:00 PM')">1:00 PM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '1:15 PM')">1:15 PM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '1:30 PM')">1:30 PM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '1:45 PM')">1:45 PM</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="selectTime(this, '2:00 PM')">2:00 PM</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="landing-page">
-    <div class="form-appointment">
-        <div class="wpcf7" id="wpcf7-f560-p590-o1">
-            <form id="contactForm">
-                <div class="group">
-                    <div style="width: 48%; float: left;">
-                        <span class="wpcf7-form-control-wrap text-680"><input type="text" name="Name" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Name" /></span>
-                        <br />
-                        <div class="contact-info">
-                            <span class="wpcf7-form-control-wrap email-680">
-                                <input type="email" name="Email" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" placeholder="Email" />
-                            </span>
-                            <span class="wpcf7-form-control-wrap tel-630">
-                                <input type="tel" name="Phone/Mobile" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" placeholder="Phone" />
-                            </span>
-                        </div>
-                        <br />
-                        <span class="wpcf7-form-control-wrap textarea-398"><textarea name="Area" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Special notes, concerns, or requirements"></textarea></span>
-                    </div>
-                    <div style="width: 48%; float: right;">
-                        <h4>What is the best way to reach you?</h4>
-                        <p>
-                            <span class="wpcf7-form-control-wrap radio-98">
-                                <span class="wpcf7-form-control wpcf7-radio">
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="radio" name="Best Way to reach By" value="Phone" />&nbsp;<span class="wpcf7-list-item-label">Phone</span></label>
-                                    </span>
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="radio" name="Best Way to reach By" value="Email" />&nbsp;<span class="wpcf7-list-item-label">Email</span></label>
-                                    </span>
-                                </span>
-                            </span>
-                        </p>
-                        <h4>Days of the week suitable for appointment:</h4>
-                        <p>
-                            <span class="wpcf7-form-control-wrap checkbox-465">
-                                <span class="wpcf7-form-control wpcf7-checkbox">
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="checkbox" name="Day" value="Monday" />&nbsp;<span class="wpcf7-list-item-label">Monday</span></label>
-                                    </span>
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="checkbox" name="Day" value="Tuesday" />&nbsp;<span class="wpcf7-list-item-label">Tuesday</span></label>
-                                    </span>
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="checkbox" name="Day" value="Wednesday" />&nbsp;<span class="wpcf7-list-item-label">Wednesday</span></label>
-                                    </span>
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="checkbox" name="Day" value="Thursday" />&nbsp;<span class="wpcf7-list-item-label">Thursday</span></label>
-                                    </span>
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="checkbox" name="Day" value="Friday" />&nbsp;<span class="wpcf7-list-item-label">Friday</span></label>
-                                    </span>
-                                </span>
-                            </span>
-                        </p>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date2" data-toggle="datetimepicker" name="Appoitement Date" />
-                                <label for="Date">Put Date in DD/MM/YY</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Time" data-target="#time2" data-toggle="datetimepicker" name="Appointement Time" />
-                                <label for="Time">Put Date in HH:MM A.M/P.M</label>
-                            </div>
-                        </div>
-                        <h4>Best time of day for your appointment:</h4>
-                        <p>
-                            <span class="wpcf7-form-control-wrap checkbox-246">
-                                <span class="wpcf7-form-control wpcf7-checkbox">
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="checkbox" name="Time" value="Morning" />&nbsp;<span class="wpcf7-list-item-label">Morning</span></label>
-                                    </span>
-                                    <span class="wpcf7-list-item">
-                                        <label><input type="checkbox" name="Time" value="Afternoon" />&nbsp;<span class="wpcf7-list-item-label">Afternoon</span></label>
-                                    </span>
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div style="text-align: center; padding-top: 2em; border-top: 1px solid rgb(153, 202, 129); margin-top: 1em;">
-                    <input type="submit" value="Request My Appointment" class="wpcf7-form-control wpcf7-submit" />
-                    <img class="ajax-loader" src="http://www.professionalaudiologicalservices.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;" />
-                </div>
-                <div class="wpcf7-response-output wpcf7-display-none"></div>
-            </form>
-            <script>
+  <div class="card shadow border-0 mt-5" id="meetingForm" style="display: none;">
+    <div class="card-body">
+      <h5 class="card-title">Confirm Meeting Details</h5>
+      <form id="contactForm">
+        <div class="mb-3">
+          <label for="meetingDate" class="form-label">Selected Date</label>
+          <input type="text" name="Selected Date" class="form-control" id="meetingDate" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="meetingTime" class="form-label">Selected Time</label>
+          <input type="text" name="Selected Time" class="form-control" id="meetingTime" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Parent's Name</label>
+          <input type="text" class="form-control" id="name" name="Parent's Name"placeholder="Enter Your Name">
+        </div>
+       <div class="mb-3">
+          <label for="name" class="form-label">Child's Name</label>
+          <input type="text" class="form-control" id="name" name="Child's Name"placeholder="Enter Your Child Name">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+        </div>
+       <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your Email Address">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  let selectedDate = "";
+  let selectedTime = "";
+
+  function selectDate(element, date) {
+    const calendarButtons = document.querySelectorAll('.calendar .btn-link');
+    calendarButtons.forEach(button => button.classList.remove('active'));
+    element.classList.add('active');
+    selectedDate = date;
+    document.getElementById('meetingDate').value = `June ${date}, 2024`;
+  }
+
+  function selectTime(element, time) {
+    const timeButtons = document.querySelectorAll('.btn-outline-secondary');
+    timeButtons.forEach(button => button.classList.remove('active'));
+    element.classList.add('active');
+    selectedTime = time;
+    document.getElementById('meetingTime').value = time;
+    document.getElementById('meetingForm').style.display = 'block';
+  }
+
                 // JavaScript to handle form submission
                 document.getElementById("contactForm").addEventListener("submit", function (event) {
                     event.preventDefault(); // Prevent the default form submission
@@ -319,12 +304,8 @@
                     // You can also display a success message or redirect the user to a thank-you page
                 });
             </script>
-        </div>
-    </div>
-</div>
 
-
-        <!-- Appointment End -->
+        <!-- Contact End -->
 
 
         <!-- Footer Start -->
@@ -335,7 +316,7 @@
                         <h3 class="text-white mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>admin@kidos.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -375,9 +356,9 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                        <form id="contactForm-2">
+                       <h3 class="text-white mb-4">Subscribe Me</h3>
+                        <p>Your Subscription gives power to Us.</p>
+                                 <form id="contactForm-2">
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" name="Email:" type="text" placeholder="Your email">
                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">submit</button>
@@ -410,17 +391,17 @@
         // You can also display a success message or redirect the user to a thank-you page
     });
 </script>
-           
                 </div>
             </div>
-            <div class="container">
+           <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">kidos</a>, All Right Reserved. 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+							Designed By <a class="border-bottom" href="https://www.kwaga.in/#homer">KWAGA Team</a>
+                           Distributed By: <a class="border-bottom" href="https://www.kwaga.in/#homer" target="_blank">Kwaga</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
