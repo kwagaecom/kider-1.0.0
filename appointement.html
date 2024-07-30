@@ -271,7 +271,971 @@
                         </p>
                         <h4>Days of the week suitable for appointment:</h4>
                         <p>
-                            <span class="wpcf7-form-control-wrap checkbox-465">
+                           <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kidos - Preschool </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+      <link href="img/favicon-32x32.png" rel="icon">
+    <link href="img/favicon-16x16.png" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kidos</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="classes.html" class="nav-item nav-link">Classes</a>
+                    <a href="appoitement.html" class="nav-item nav-link active">Appoitement</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Page Header End -->
+
+
+        <!-- Appointment Start -->
+
+<style>
+    .group:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .landing-page {
+        width: 100%;
+        max-width: 882px;
+        margin: 100px auto 0;
+        padding: 0 20px; /* Add padding for better mobile view */
+    }
+
+    .landing-page *,
+    .landing-page *:before,
+    .landing-page *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .landing-page .module {
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 4px;
+        float: left;
+        padding: 2em;
+        width: 48%;
+    }
+
+    .landing-page .module > *:last-child,
+    .landing-page .module > *:last-child > *:last-child,
+    .landing-page .module > *:last-child > *:last-child > *:last-child {
+        margin: 0;
+        padding: 0;
+    }
+
+    .landing-page .note {
+        background-color: rgb(236, 248, 236);
+        background-image: url("img/appointment.jpg");
+        border: 1px dashed;
+        border-radius: 4px;
+        color: rgb(115, 136, 96);
+        font-family: georgia;
+        font-size: 0.9em;
+        font-style: italic;
+        margin: 20px auto;
+        padding: 2em;
+    }
+
+    .form-appointment {
+        padding: 2em;
+        background: url('#') no-repeat center center; /* Add your image URL here */
+        background-size: cover;
+        border-radius: 4px;
+        border: 1px solid rgb(130, 228, 130);
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        font-family: "PT Sans", Arial, sans-serif;
+        margin: 20px auto;
+    }
+
+    .form-appointment input[type="text"],
+    .form-appointment input[type="email"],
+    .form-appointment input[type="tel"],
+    .form-appointment textarea {
+        border: 1px solid rgb(153, 202, 129);
+        border-radius: 0.2em;
+        font-family: "PT Sans", Arial, sans-serif;
+        font-size: 1.1em;
+        padding: 0.4em 1em;
+        margin: 0 0 0.8em;
+        width: 100%;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.08) inset;
+    }
+
+    .form-appointment input[type="text"],
+    .form-appointment input[type="email"],
+    .form-appointment input[type="tel"],
+    .form-appointment input[type="submit"],
+    .form-appointment textarea {
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .form-appointment input[type="text"]:active,
+    .form-appointment input[type="text"]:focus,
+    .form-appointment input[type="email"]:active,
+    .form-appointment input[type="email"]:focus,
+    .form-appointment input[type="tel"]:active,
+    .form-appointment input[type="tel"]:focus,
+    .form-appointment textarea:active,
+    .form-appointment textarea:focus {
+        outline: 0;
+        box-shadow: 0 0 6px rgb(176, 226, 188);
+    }
+
+    .form-appointment textarea {
+        height: 160px;
+    }
+
+    .form-appointment input[type="submit"] {
+        background-color: rgb(118, 207, 118);
+        border: 1px solid rgb(134, 189, 134);
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1.4em;
+        padding: 10px 18px;
+    }
+
+    .form-appointment input[type="submit"]:hover {
+        background-color: white;
+        color: rgb(118, 207, 118);
+    }
+
+    .form-appointment .wpcf7-list-item-label {
+        color: rgb(130, 178, 136);
+    }
+
+    span.wpcf7-list-item {
+        display: block;
+        margin-left: -0.02em;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .contact-info .wpcf7-form-control-wrap {
+        flex: 1;
+    }
+</style>
+<section>
+<div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3" align="center">Get In Touch</h1>
+                    <p>"Reach out to us today and let's start shaping a brighter future together. .</p>
+                </div>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                            <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
+                        </div>
+                        <h6>123 Street, New York, USA</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                            <i class="fa fa-envelope-open fa-2x text-primary"></i>
+                        </div>
+                        <h6>principal@kidos.com</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                        </div>
+                        <h6>+012 345 6789</h6>
+                    </div>
+                </div>
+               
+                <div class="wpcf7-response-output wpcf7-display-none"></div>
+
+</section>
+<div class="landing-page">
+    <div class="form-appointment">
+        <div class="wpcf7" id="wpcf7-f560-p590-o1">
+            <form id="contactForm">
+                <div class="group">
+                    <div style="width: 48%; float: left;">
+                        <span class="wpcf7-form-control-wrap text-680"><input type="text" name="Name" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Name" /></span>
+                        <br />
+                        <div class="contact-info">
+                            <span class="wpcf7-form-control-wrap email-680">
+                                <input type="email" name="Email" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" placeholder="Email" />
+                            </span>
+                            <span class="wpcf7-form-control-wrap tel-630">
+                                <input type="tel" name="Phone/Mobile" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" placeholder="Phone" />
+                            </span>
+                        </div>
+                        <br />
+                        <span class="wpcf7-form-control-wrap textarea-398"><textarea name="Area" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Special notes, concerns, or requirements"></textarea></span>
+                    </div>
+                    <div style="width: 48%; float: right;">
+                        <h4>What is the best way to reach you?</h4>
+                        <p>
+                            <span class="wpcf7-form-control-wrap radio-98">
+                                <span class="wpcf7-form-control wpcf7-radio">
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="radio" name="Best Way to reach By" value="Phone" />&nbsp;<span class="wpcf7-list-item-label">Phone</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="radio" name="Best Way to reach By" value="Email" />&nbsp;<span class="wpcf7-list-item-label">Email</span></label>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <h4>Days of the week suitable for appointment:</h4>
+                        <p>
+                            <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kidos - Preschool </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+      <link href="img/favicon-32x32.png" rel="icon">
+    <link href="img/favicon-16x16.png" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kidos</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="classes.html" class="nav-item nav-link">Classes</a>
+                    <a href="appoitement.html" class="nav-item nav-link active">Appoitement</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Page Header End -->
+
+
+        <!-- Appointment Start -->
+
+<style>
+    .group:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .landing-page {
+        width: 100%;
+        max-width: 882px;
+        margin: 100px auto 0;
+        padding: 0 20px; /* Add padding for better mobile view */
+    }
+
+    .landing-page *,
+    .landing-page *:before,
+    .landing-page *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .landing-page .module {
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 4px;
+        float: left;
+        padding: 2em;
+        width: 48%;
+    }
+
+    .landing-page .module > *:last-child,
+    .landing-page .module > *:last-child > *:last-child,
+    .landing-page .module > *:last-child > *:last-child > *:last-child {
+        margin: 0;
+        padding: 0;
+    }
+
+    .landing-page .note {
+        background-color: rgb(236, 248, 236);
+        background-image: url("img/appointment.jpg");
+        border: 1px dashed;
+        border-radius: 4px;
+        color: rgb(115, 136, 96);
+        font-family: georgia;
+        font-size: 0.9em;
+        font-style: italic;
+        margin: 20px auto;
+        padding: 2em;
+    }
+
+    .form-appointment {
+        padding: 2em;
+        background: url('#') no-repeat center center; /* Add your image URL here */
+        background-size: cover;
+        border-radius: 4px;
+        border: 1px solid rgb(130, 228, 130);
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        font-family: "PT Sans", Arial, sans-serif;
+        margin: 20px auto;
+    }
+
+    .form-appointment input[type="text"],
+    .form-appointment input[type="email"],
+    .form-appointment input[type="tel"],
+    .form-appointment textarea {
+        border: 1px solid rgb(153, 202, 129);
+        border-radius: 0.2em;
+        font-family: "PT Sans", Arial, sans-serif;
+        font-size: 1.1em;
+        padding: 0.4em 1em;
+        margin: 0 0 0.8em;
+        width: 100%;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.08) inset;
+    }
+
+    .form-appointment input[type="text"],
+    .form-appointment input[type="email"],
+    .form-appointment input[type="tel"],
+    .form-appointment input[type="submit"],
+    .form-appointment textarea {
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .form-appointment input[type="text"]:active,
+    .form-appointment input[type="text"]:focus,
+    .form-appointment input[type="email"]:active,
+    .form-appointment input[type="email"]:focus,
+    .form-appointment input[type="tel"]:active,
+    .form-appointment input[type="tel"]:focus,
+    .form-appointment textarea:active,
+    .form-appointment textarea:focus {
+        outline: 0;
+        box-shadow: 0 0 6px rgb(176, 226, 188);
+    }
+
+    .form-appointment textarea {
+        height: 160px;
+    }
+
+    .form-appointment input[type="submit"] {
+        background-color: rgb(118, 207, 118);
+        border: 1px solid rgb(134, 189, 134);
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1.4em;
+        padding: 10px 18px;
+    }
+
+    .form-appointment input[type="submit"]:hover {
+        background-color: white;
+        color: rgb(118, 207, 118);
+    }
+
+    .form-appointment .wpcf7-list-item-label {
+        color: rgb(130, 178, 136);
+    }
+
+    span.wpcf7-list-item {
+        display: block;
+        margin-left: -0.02em;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .contact-info .wpcf7-form-control-wrap {
+        flex: 1;
+    }
+</style>
+<section>
+<div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3" align="center">Get In Touch</h1>
+                    <p>"Reach out to us today and let's start shaping a brighter future together. .</p>
+                </div>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                            <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
+                        </div>
+                        <h6>123 Street, New York, USA</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                            <i class="fa fa-envelope-open fa-2x text-primary"></i>
+                        </div>
+                        <h6>principal@kidos.com</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                        </div>
+                        <h6>+012 345 6789</h6>
+                    </div>
+                </div>
+               
+                <div class="wpcf7-response-output wpcf7-display-none"></div>
+
+</section>
+<div class="landing-page">
+    <div class="form-appointment">
+        <div class="wpcf7" id="wpcf7-f560-p590-o1">
+            <form id="contactForm">
+                <div class="group">
+                    <div style="width: 48%; float: left;">
+                        <span class="wpcf7-form-control-wrap text-680"><input type="text" name="Name" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Name" /></span>
+                        <br />
+                        <div class="contact-info">
+                            <span class="wpcf7-form-control-wrap email-680">
+                                <input type="email" name="Email" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" placeholder="Email" />
+                            </span>
+                            <span class="wpcf7-form-control-wrap tel-630">
+                                <input type="tel" name="Phone/Mobile" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" placeholder="Phone" />
+                            </span>
+                        </div>
+                        <br />
+                        <span class="wpcf7-form-control-wrap textarea-398"><textarea name="Area" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Special notes, concerns, or requirements"></textarea></span>
+                    </div>
+                    <div style="width: 48%; float: right;">
+                        <h4>What is the best way to reach you?</h4>
+                        <p>
+                            <span class="wpcf7-form-control-wrap radio-98">
+                                <span class="wpcf7-form-control wpcf7-radio">
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="radio" name="Best Way to reach By" value="Phone" />&nbsp;<span class="wpcf7-list-item-label">Phone</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="radio" name="Best Way to reach By" value="Email" />&nbsp;<span class="wpcf7-list-item-label">Email</span></label>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <h4>Days of the week suitable for appointment:</h4>
+                        <p>
+                            <div class="wpcf7-form-control-wrap checkbox-465">
+                                <span class="wpcf7-form-control wpcf7-checkbox">
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Monday" />&nbsp;<span class="wpcf7-list-item-label">Monday</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Tuesday" />&nbsp;<span class="wpcf7-list-item-label">Tuesday</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Wednesday" />&nbsp;<span class="wpcf7-list-item-label">Wednesday</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Thursday" />&nbsp;<span class="wpcf7-list-item-label">Thursday</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Friday" />&nbsp;<span class="wpcf7-list-item-label">Friday</span></label>
+                                    </span>
+                                </span>
+                            </span>
+                            </div>
+                        </p>
+                       <div class="mb-3">
+                <label for="Appointement Date" class="form-label">Preferred Demo Date</label>
+                <input type="date" class="form-control" id="demoDate" name="DemoDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="Appointement Time" class="form-label">Preferred Demo Time</label>
+                <input type="time" class="form-control" id="demoTime" name="DemoTime" required>
+            </div>
+                        <h4>Best time of day for your appointment:</h4>
+                        <p>
+                              <div class="wpcf7-form-control-wrap checkbox-246">
+                                <span class="wpcf7-form-control wpcf7-checkbox">
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Time" value="Morning" />&nbsp;<span class="wpcf7-list-item-label">Morning</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Time" value="Afternoon" />&nbsp;<span class="wpcf7-list-item-label">Afternoon</span></label>
+                                    </span>
+                                </span>
+                            </span>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+ <div style="text-align: center; padding-top: 2em; border-top: 1px solid rgb(153, 202, 129); margin-top: 1em;">
+                    <input type="submit" value="Request My Appointment" class="wpcf7-form-control wpcf7-submit" />
+                    <img class="ajax-loader" src="http://www.professionalaudiologicalservices.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;" />
+                </div>
+            </form>
+            <script>
+                // JavaScript to handle form submission
+                document.getElementById("contactForm").addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    const formData = new FormData(event.target);
+                    const email = "kwagaecom@gmail.com"; // Your Gmail address
+                    const subject = "Subscriber Email Submission"; // Subject for the email
+
+                    let message = "Subscriber Details:\n\n";
+
+                    // Iterate over form data and append to message
+                    for (const [key, value] of formData.entries()) {
+                        message += `${key}: ${value}\n`;
+                    }
+
+                    // Create a "mailto" URL with the pre-filled email subject and body
+                    const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+                    // Open the default email client with the pre-filled email
+                    window.location.href = mailtoURL;
+
+                    // You can also display a success message or redirect the user to a thank-you page
+                });
+            </script>
+        </div>
+    </div>
+</div>
+                       
+        <!-- Appointment End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Get In Touch</h3>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Quick Links</h3>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Photo Gallery</h3>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Newsletter</h3>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <form id="contactForm-2">
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" name="Email:" type="text" placeholder="Your email">
+                           <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">submit</button>
+                              </div>
+</form>
+
+
+ <script>
+    // JavaScript to handle form submission
+    document.getElementById("contactForm-2").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(event.target);
+        const email = 'kwagaecom@gmail.com'; // Your Gmail address
+        const subject = 'Subscriber Email Submission'; // Subject for the email
+
+        let message = "Subscriber Details:\n\n";
+
+        // Iterate over form data and append to message
+        for (const [key, value] of formData.entries()) {
+            message += `${key}: ${value}\n`;
+        }
+
+        // Create a "mailto" URL with the pre-filled email subject and body
+        const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+        // Open the default email client with the pre-filled email
+        window.location.href = mailtoURL;
+
+        // You can also display a success message or redirect the user to a thank-you page
+    });
+</script>
+           
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+                                <span class="wpcf7-form-control wpcf7-checkbox">
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Monday" />&nbsp;<span class="wpcf7-list-item-label">Monday</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Tuesday" />&nbsp;<span class="wpcf7-list-item-label">Tuesday</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Wednesday" />&nbsp;<span class="wpcf7-list-item-label">Wednesday</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Thursday" />&nbsp;<span class="wpcf7-list-item-label">Thursday</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Day" value="Friday" />&nbsp;<span class="wpcf7-list-item-label">Friday</span></label>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                       <div class="mb-3">
+                <label for="Appointement Date" class="form-label">Preferred Demo Date</label>
+                <input type="date" class="form-control" id="demoDate" name="DemoDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="Appointement Time" class="form-label">Preferred Demo Time</label>
+                <input type="time" class="form-control" id="demoTime" name="DemoTime" required>
+            </div>
+                        <h4>Best time of day for your appointment:</h4>
+                        <p>
+                            <span class="wpcf7-form-control-wrap checkbox-246">
+                                <span class="wpcf7-form-control wpcf7-checkbox">
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Time" value="Morning" />&nbsp;<span class="wpcf7-list-item-label">Morning</span></label>
+                                    </span>
+                                    <span class="wpcf7-list-item">
+                                        <label><input type="checkbox" name="Time" value="Afternoon" />&nbsp;<span class="wpcf7-list-item-label">Afternoon</span></label>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+ <div style="text-align: center; padding-top: 2em; border-top: 1px solid rgb(153, 202, 129); margin-top: 1em;">
+                    <input type="submit" value="Request My Appointment" class="wpcf7-form-control wpcf7-submit" />
+                    <img class="ajax-loader" src="http://www.professionalaudiologicalservices.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;" />
+                </div>
+            </form>
+            <script>
+                // JavaScript to handle form submission
+                document.getElementById("contactForm").addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    const formData = new FormData(event.target);
+                    const email = "kwagaecom@gmail.com"; // Your Gmail address
+                    const subject = "Subscriber Email Submission"; // Subject for the email
+
+                    let message = "Subscriber Details:\n\n";
+
+                    // Iterate over form data and append to message
+                    for (const [key, value] of formData.entries()) {
+                        message += `${key}: ${value}\n`;
+                    }
+
+                    // Create a "mailto" URL with the pre-filled email subject and body
+                    const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+                    // Open the default email client with the pre-filled email
+                    window.location.href = mailtoURL;
+
+                    // You can also display a success message or redirect the user to a thank-you page
+                });
+            </script>
+        </div>
+    </div>
+</div>
+                       
+        <!-- Appointment End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Get In Touch</h3>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Quick Links</h3>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Photo Gallery</h3>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Newsletter</h3>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <form id="contactForm-2">
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" name="Email:" type="text" placeholder="Your email">
+                           <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">submit</button>
+                              </div>
+</form>
+
+
+ <script>
+    // JavaScript to handle form submission
+    document.getElementById("contactForm-2").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(event.target);
+        const email = 'kwagaecom@gmail.com'; // Your Gmail address
+        const subject = 'Subscriber Email Submission'; // Subject for the email
+
+        let message = "Subscriber Details:\n\n";
+
+        // Iterate over form data and append to message
+        for (const [key, value] of formData.entries()) {
+            message += `${key}: ${value}\n`;
+        }
+
+        // Create a "mailto" URL with the pre-filled email subject and body
+        const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+        // Open the default email client with the pre-filled email
+        window.location.href = mailtoURL;
+
+        // You can also display a success message or redirect the user to a thank-you page
+    });
+</script>
+           
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
                                 <span class="wpcf7-form-control wpcf7-checkbox">
                                     <span class="wpcf7-list-item">
                                         <label><input type="checkbox" name="Day" value="Monday" />&nbsp;<span class="wpcf7-list-item-label">Monday</span></label>
