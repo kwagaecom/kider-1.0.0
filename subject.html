@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kidos - Preschool </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+     <link href="img/favicon-32x32.png" rel="icon">
+    <link href="img/favicon-16x16.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kidos</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="nocollapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                      <a href="about.html" class="nav-item nav-link">AboutUs</a>
+                    <a href="classes.html" class="nav-item nav-link ">Classes</a>
+                    
+                    
+                    <a href="career.html" class="nav-item nav-link">Career</a>
+                       <a href="survey.html" class="nav-item nav-link">Survey</a>
+                        <a href="complaint.html" class="nav-item nav-link">Complaint</a>
+                    <a href="appointment.html" class="nav-item nav-link">Appointement</a>
+                 
+             <div class="nav-item dropdown show" id="classesDropdown">
+    <a href="subject.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Subject</a>
+    <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+        <a href="Routine.html" class="dropdown-item">Routine</a>
+    </div>
+</div>
+          
+                    
+                </div>
+                <a href="appointement.html" class="btn btn-primary rounded-pill px-3 d-none d-lg-block active">Schedule A Demo<i class="fa fa-noarrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Page Header End -->
+       
+        <!-- Page Header End -->
+
+
+        <!-- Contact Start -->
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--background: #dad7cd;
+	--lines: #a3b18a;
+	--border: #588157;
+	--text: #344e41;
+	--warn-body: #344e41;
+	--warn-text: #dad7cd;
+}
+
+body {
+	background-color: var(--background);
+	font-weight: 500;
+}
+
+.popup {
+	width: 500px;
+	height: 30px;
+	font-size: 11px;
+	background: var(--warn-body);
+	line-height: 15px;
+	display: flex;
+	color: var(--warn-text);
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 25px;
+	padding: 5px 15px 5px 15px;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	cursor: default;
+    visibility: visible;
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.popup .close {
+	font-size: 25px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.clicked {
+    display: none;
+}
+
+.tree {
+	display: grid;
+	place-items: center;
+}
+.tree ul {
+	padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid var(--lines);
+	width: 50%; height: 20px;
+}
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 1px solid var(--lines);
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+.tree li:only-child{ padding-top: 0;}
+
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+.tree li:last-child::before{
+	border-right: 1px solid var(--lines);
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid var(--lines);
+	width: 0; height: 20px;
+}
+
+.tree li a{
+	border: 3px solid var(--border);
+	border-image-slice: 1;
+	border-radius: 8px;
+	background: var(--background);
+        width: 100px;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: var(--text);
+	font-size: 13px;
+	display: inline-block;
+	z-index: 20000;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li a:hover, .tree li a:hover+ul li a {
+	background: var(--border);
+	color: var(--background);
+	border: 3px solid var(--border);
+}
+
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color: var(--border);
+}
+.tree .head {
+	width: 240px;
+}
+.tree .sub-head {
+	width: 110px;
+}
+
+.low-heads .main-container ul li a {
+	margin-bottom: 25px;
+}
+
+.low-heads  ul ul{
+	height: 12px;
+}
+</style>
+ 
+    <div class="popup" id="popupMassege">
+        <p>If the right side of the hierarchy breaks down,<br>try zooming out or going to full screen</p>
+        <span class="close" onclick="closePopup()"><i class="ph-light ph-x-circle"></i></span>
+    </div>
+    <div class="tree">
+        <ul>
+            <li>
+                <a href="#" class="head">Subjects that teaches in Kids School Street, New York, USA</a>
+                <ul>
+                    <li>
+                        <a href="#">Nursery - Class I</a>
+                        <ul>
+                            <li class="low-heads">
+                                <a href="#" class="sub-head">Pre-Nursery</a>
+                                <ul class="main-container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Language Development</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Awareness</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Craft</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Development</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social and Emotional Development</a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li class="low-heads">
+                                <a href="#" class="sub-head">Nursery</a>
+                                <ul class="main-container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Language and Literacy</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Science</a>
+                                        </li>
+                                    </ul><br><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Craft</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Development</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social Studies</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Music and Dance</a>
+                                        </li>
+                                    </ul><br><br>
+                                    
+                                </ul>
+                            </li>
+                            <li class="low-heads">
+                                <a href="#" class="sub-head">L.K.G</a>
+                                <ul class="main-container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Language and Literacy</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Science</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Crafts</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Development</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social Studies</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Music and Dance</a>
+                                        </li>
+                                    </ul><br><br>
+                                </ul>
+                            </li>
+                            <li class="low-heads">
+                                <a href="#" class="sub-head">U.K.G</a>
+                                <ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Language and Literacy</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Science</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Crafts</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Development</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social Studies</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Music and Dance</a>
+                                        </li>
+                                    </ul><br><br>
+                                </ul>
+                            </li>
+                            <li class="low-heads">
+                                <a href="#" class="sub-head">Class I</a>
+                                <ul class="main-container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Language Arts</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Science</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Crafts</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Education</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social Studies</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Music and Dance</a>
+                                        </li>
+                                    </ul><br><br>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Class II - Class V</a>
+                        <ul>
+                            <li class="low-heads">
+                                <a href="#">Class II</a>
+                                <ul class="main-container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Language Arts</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Science</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Crafts</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Education</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social Studies</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Music and Dance</a>
+                                        </li>
+                                    </ul><br><br>
+                                </ul>
+                            </li>
+                            <li class="low-heads">
+                                <a href="#">Class III</a>
+                                <ul class="main-container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Language Arts</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Science</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Crafts</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Education</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social Studies</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Music and Dance</a>
+                                        </li>
+                                    </ul><br><br>
+                                </ul>
+                            </li>
+                            <li class="low-heads">
+                                <a href="#">Class IV</a>
+                                <ul class="main-container">
+                                   <ul>
+                                        <li>
+                                            <a href="#">Language Arts</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Science</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Crafts</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Education</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social Studies</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Music and Dance</a>
+                                        </li>
+                                    </ul><br><br>
+                                </ul>
+                            </li>
+                            <li class="low-heads">
+                                <a href="#">Class V</a>
+                                <ul class="main-container">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Language Arts</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mathematics</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Environmental Science</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Art and Crafts</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Physical Education</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Social Studies</a>
+                                        </li>
+                                    </ul><br>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Music and Dance</a>
+                                        </li>
+                                    </ul><br><br>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+
+
+<script>
+
+</script>
+
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Get In Touch Section -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>admin@kidos.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="d-flex justify-content-center gap-2 mt-3">
+                    <a href="about.html">
+                        <button class="btn btn-primary" type="button">About Us</button>
+                    </a>
+                    <a href="classes.html">
+                        <button class="btn btn-secondary" type="button">Classes</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Photo Gallery Section -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="text-white mb-4">Photo Gallery</h3>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="text-white mb-4">Our Location</h3>
+                <div class="bg-light p-2 rounded">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.5785412992355!2d-74.00601528459674!3d40.7127759793311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19f79cb103%3A0x3e9e31d41a0138d4!2s123%20Street%2C%20New%20York%2C%20NY%2010018%2C%20USA!5e0!3m2!1sen!2sin!4v1625573987156!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">kidos</a>, All Right Reserved.
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom" href="https://www.kwaga.in/#homer">KWAGA Team</a>
+                    Distributed By: <a class="border-bottom" href="https://www.kwaga.in/#homer" target="_blank">Kwaga</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="">Home</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
