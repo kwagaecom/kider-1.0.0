@@ -217,6 +217,131 @@
         </div>
     </div>
 </section>
+         <style>
+    body {
+      padding-top: 50px;
+    }
+
+    .starter-template {
+      padding: 40px 15px;
+    }
+
+    .tab-pane {
+      padding: 20px;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="starter-template">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Students</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Staff</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+            </li>-->
+          </ul>
+
+          <!-- tab content starts here -->
+          <div class="tab-content" id="myTabContent">
+
+            <!-- content 1 -->
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            
+              <div class="chart-container">
+                <canvas id="studentPieChart"></canvas>
+              </div>
+            </div>
+
+            <!-- content 2 -->
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              
+              <div class="chart-container">
+                <canvas id="subjectBarChart"></canvas>
+              </div>
+            </div>
+
+            <!-- content 3 -->
+           <!-- <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+              <h3>Tab 3 Content</h3>
+              <!-- Additional content here -->
+            </div>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    (function($) {
+      // Initialize charts
+      $(document).ready(function() {
+        // Data for Tab 1 Pie Chart
+        var ctx1 = document.getElementById('studentPieChart').getContext('2d');
+        var studentPieChart = new Chart(ctx1, {
+          type: 'pie',
+         data: {
+            labels: ['Total Stidents', 'Boys', 'Girls'],
+            datasets: [{
+              
+              data: [4200, 2800, 1400], // Example data
+              backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+            }]
+          },
+          options: {
+            responsive: true
+          }
+        });
+
+        // Data for Tab 2 Bar Chart
+        var ctx2 = document.getElementById('subjectBarChart').getContext('2d');
+        var subjectBarChart = new Chart(ctx2, {
+          type: 'bar',
+          data: {
+            labels: ['Math', 'Science', 'Literature', 'Language Development', 'Music', 'Social Studies'],
+            datasets: [{
+              label: 'Number of Staff',
+              data: [5, 4, 6, 3, 2, 4], // Example data
+              backgroundColor: '#36A2EB'
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      });
+
+      // Reinitialize charts inside each panel after the relative tab link is clicked
+      $('a[data-toggle=tab]').each(function() {
+        var $this = $(this);
+
+        $this.on('shown.bs.tab', function() {
+          // Trigger chart updates if needed
+        });
+      });
+    })(jQuery);
+  </script>            
         <!-- Facilities Start -->
         <div class="container-xxl py-5">
             <div class="container">
