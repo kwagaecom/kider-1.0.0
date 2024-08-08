@@ -360,6 +360,42 @@ socialShareButtons.forEach(function (button) {
         .team-member .designation {
             color: #666;
         }
+.medium{
+    font-size:2em;
+}
+.sliding-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+}
+
+.sliding-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.message {
+    flex: 1 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #f0f0f0; /* Adjust styling as needed */
+    border: 1px solid #ddd;
+}
+
+.title.medium {
+    font-size: 1.5rem;
+}
+
+.principal-message {
+    background-color: #e0e0e0; /* Adjust styling as needed */
+}
+
+.director-message {
+    background-color: #c0c0c0; /* Adjust styling as needed */
+}
+
     </style>
 
 <section>
@@ -369,6 +405,27 @@ socialShareButtons.forEach(function (button) {
             <div class="name">Rumela</div>
             <div class="designation">Principal</div>
         </div>
+<section class="sliding-container">
+    <div class="sliding-content">
+        <div class="message principal-message">
+            <h2 align="center" class="title medium">Principal's Message</h2>
+            <p>"Welcome to Our Kids School! As your principal, I am thrilled to have your children join us for a year of growth, learning, and fun."</p>
+ <p>Our dedicated staff is committed to providing a safe and nurturing environment where every student can thrive. <p> 
+<p>We believe in the power of collaboration between home and school, and we encourage you to stay engaged with your child’s education.<p> 
+<p>Together, we will work towards achieving academic excellence while fostering social and emotional development. Your support is invaluable, and we look forward to partnering with you to make this a memorable and successful year for your child.</p> 
+       <p align="center">Thank you for entrusting us with your child's education. </p>
+</div>
+        <div class="message director-message">
+            <h2 align="center" class="title medium">Director's Message</h2>
+            <p> "As the Director of Kids School, I am excited to welcome you and your child to a new school year filled with endless possibilities."</p>
+<p> Our goal is to provide an enriching experience that not only supports your child’s academic growth but also their overall well-being. </p>
+<p> We understand that each child is unique, and we are here to ensure that they receive the personalized attention and care they need.</p>
+<p> We value the strong partnership between parents and our school, and we encourage open communication to best support your child’s journey.</p>
+ <p align="center">Thank you for your continued support and trust in our school. </p>
+        </div>
+    </div>
+</section>
+
         <div class="team-member">
             <img src="https://images.unsplash.com/photo-1669729139185-a963077024f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFZJUCUyMFBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Director">
             <div class="name">Ordina</div>
@@ -376,6 +433,20 @@ socialShareButtons.forEach(function (button) {
         </div>
     </div>
 </section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const messages = document.querySelectorAll('.message');
+    let currentIndex = 0;
+
+    function showNextMessage() {
+        currentIndex = (currentIndex + 1) % messages.length;
+        const offset = -currentIndex * 100;
+        document.querySelector('.sliding-content').style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(showNextMessage, 5000); // Change message every 5 seconds
+});
+</script>
          <style>
     body {
       padding-top: 50px;
@@ -507,27 +578,30 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.accordion-container {
+.accordion-row {
     display: flex;
-    justify-content: space-between;
-
-
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .accordion {
     flex: 1;
     margin: 0 10px;
-
 }
 
 .accordion-button {
     background-color: #f1f1f1;
-
     border: none;
     cursor: pointer;
     padding: 10px;
     width: 100%;
     text-align: left;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-button:hover {
+    background-color: #ddd;
 }
 
 .accordion-content {
@@ -535,47 +609,232 @@ body {
     padding: 10px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.active .accordion-content {
+    display: block;
 }
 </style>
-<div align="center" class="accordion-container">
-        <div class="accordion">
-            <button  class="accordion-button">Circular</button>
-            <div class="accordion-content">
-    <h3>Registration School</h3>
-    <iframe src="https://drive.google.com/file/d/your-registration-school-pdf-id/preview" width="100%" height="500px" allow="autoplay"></iframe>
-    <a href="https://drive.google.com/uc?export=download&id=your-registration-school-pdf-id" target="_blank" class="download-link">Download Registration School PDF</a>
+<div class="accordion-row">
+    <div class="accordion">
+        <button class="accordion-button">Circular</button>
+        <div class="accordion-content">
+            <h3>Registration School</h3>
+            <iframe src="https://drive.google.com/file/d/your-registration-school-pdf-id/preview" width="100%" height="500px" allow="autoplay"></iframe>
+            <a href="https://drive.google.com/uc?export=download&id=your-registration-school-pdf-id" target="_blank" class="download-link">Download Registration School PDF</a>
 
-    <h3>Affiliate School with Trust</h3>
-    <iframe src="https://drive.google.com/file/d/your-affiliate-school-pdf-id/preview" width="100%" height="500px" allow="autoplay"></iframe>
-    <a href="https://drive.google.com/uc?export=download&id=your-affiliate-school-pdf-id" target="_blank" class="download-link">Download Affiliate School with Trust PDF</a>
-</div>
-
-        </div>
-        <div class="accordion">
-            <button class="accordion-button">New News</button>
-
-<div class="accordion-content">
-  <div class="pager-header col-lg-12 col-mad-12 col-sm-12 col-xs-12" id="What’s New">
-         <h2 class="text-capitalize">What’s New</h2>
-        </div>
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-success col-lg-12 col-md-12 col-sm-12 col-xs-12 envirovement_li">
-                <h4>New School Canteen</h4>
-                <img src="https://i.postimg.cc/rwzGFmTh/sc1.jpg" class="img-reponsive col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                <p class="list-group-items-text col-lg-7 col-md-7 col-sm-7 col-xs-12" > </p>
-            </li>
-                                                                                     
-      <ul class="list-group">
-            <li class="list-group-item list-group-item-success col-lg-12 col-md-12 col-sm-12 col-xs-12 envirovement_li">
-                <h4>Implemented Online Attendance Management System</h4>
-                <img src="https://www.paatham.in/blog/wp-content/uploads/2019/10/RFID-attendance-management-system.jpg" class="img-reponsive col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                <p class="list-group-items-text col-lg-7 col-md-7 col-sm-7 col-xs-12" ></p>
-            </li>                                                                               
-                               
-</div>
-
+            <h3>Affiliate School with Trust</h3>
+            <iframe src="https://drive.google.com/file/d/your-affiliate-school-pdf-id/preview" width="100%" height="500px" allow="autoplay"></iframe>
+            <a href="https://drive.google.com/uc?export=download&id=your-affiliate-school-pdf-id" target="_blank" class="download-link">Download Affiliate School with Trust PDF</a>
         </div>
     </div>
+
+    <div class="accordion">
+        <button class="accordion-button">New News</button>
+        <div class="accordion-content">
+            <div class="pager-header" id="What’s New">
+                <h2 class="text-capitalize">What’s New</h2>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success envirovement_li">
+                    <h4>New School Canteen</h4>
+                    <img src="https://i.postimg.cc/rwzGFmTh/sc1.jpg" class="img-responsive">
+                    <p class="list-group-items-text"> </p>
+                </li>
+                <li class="list-group-item list-group-item-success envirovement_li">
+                    <h4>Implemented Online Attendance Management System</h4>
+                    <img src="https://www.paatham.in/blog/wp-content/uploads/2019/10/RFID-attendance-management-system.jpg" class="img-responsive">
+                    <p class="list-group-items-text"> </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="accordion">
+     <div  class="pager-header col-lg-12 col-mad-12 col-sm-12 col-xs-12" id="What’s New">
+ <button class="accordion-button">NOTIFICATION</button>
+    <!--division_2-->
+        <div align="center" class="divisions division_2 flex">
+        <section class="flex_content padding_2x">
+            <div class="title_header">
+                <h2 class="title medium">Notifications</h2>
+                <p>Stay updated with the latest news and events from our school.</p>
+                <span class="bar_blue"></span>
+            </div>
+            <marquee align="center" direction="up" id="notification" onmouseover="this.stop();" onmouseleave="this.start();">
+                <!--notification begining-->
+                <a href="#" class="flex fixed_flex">
+                    <figure align="center">
+                        <img src="https://plus.unsplash.com/premium_photo-1704984294816-8a0ec0fbb09b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFydCUyMGNsYXNzJTIwZXhoaWJpdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="" loading="lazy" />
+                    </figure>
+                    <article align="center">
+                        <h3 class="title">Art Class Exhibition</h3>
+                        <p>Join us for the annual Art Class Exhibition showcasing students' creative work!</p>
+                        <aside class="fixed_flex">
+                            <span>
+                                <i class="fa fa-calendar"></i>
+                                12-08-2023
+                            </span>
+                            <span>
+                                <i class="fa fa-clock-o"></i>
+                                20:38 pm
+                            </span>
+                        </aside>
+                    </article>
+                </a>
+                <!--notification ends-->
+                <!--notification begining-->
+                <a href="#" class="flex fixed_flex">
+                    <figure align="center">
+                        <img src="https://plus.unsplash.com/premium_photo-1683140893042-af3aa516ae40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NpZW5jZSUyMGZhaXJ8ZW58MHx8MHx8fDA%3D" alt="" loading="lazy" />
+                    </figure>
+                    <article align="center">
+                       <h3 class="title">Science Fair</h3>
+                        <p>Students will present their science projects and experiments. Don't miss it!</p>
+                        <aside class="fixed_flex">
+                            <span>
+                                <i class="fa fa-calendar"></i>
+                                12-08-2023
+                            </span>
+                            <span>
+                                <i class="fa fa-clock-o"></i>
+                                20:38 pm
+                            </span>
+                        </aside>
+                    </article>
+                </a>
+                <!--notification ends-->
+                <!--notification begining-->
+                <a href="#" class="flex fixed_flex">
+                   <figure align="center">
+                        <img src="https://images.unsplash.com/photo-1670173470316-076b9246df49?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyaXAlMjB0byUyMHpvb3xlbnwwfHwwfHx8MA%3D%3D" alt="" loading="lazy" />
+                    </figure>
+                    <article align="center">
+                       <h3 class="title">Field Trip to the Zoo</h3>
+                        <p>Our students will be visiting the zoo for an educational field trip. Permission slips required.</p>
+                        <aside  class="fixed_flex">
+                            <span>
+                                <i class="fa fa-calendar"></i>
+                                12-08-2023
+                            </span>
+                            <span>
+                                <i class="fa fa-clock-o"></i>
+                                20:38 pm
+                            </span>
+                        </aside>
+                    </article>
+                </a>
+                <!--notification ends-->
+                <!--notification begining-->
+                <a href="#" class="flex fixed_flex">
+                    <figure align="center">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGFyZW50JTIwdGVhY2hlciUyMG1lZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="" loading="lazy" />
+                    </figure>
+                    <article align="center">
+                         <h3 class="title">Parent-Teacher Meeting</h3>
+                        <p>Meet with teachers to discuss your child's progress and upcoming goals.</p>
+                        <aside class="fixed_flex">
+                            <span>
+                                <i class="fa fa-calendar"></i>
+                                12-08-2023
+                            </span>
+                            <span>
+                                <i class="fa fa-clock-o"></i>
+                                20:38 pm
+                            </span>
+                        </aside>
+                    </article>
+                </a>
+                <!--notification ends-->
+            </marquee>
+        </section>
+    
+    </div>
+
+
+    <div class="accordion">
+        <button class="accordion-button">Announcements</button>
+        <div class="accordion-content">
+        <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card text-white bg-primary">
+                    <div class="card-header">Field Trip</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Upcoming Field Trip</h5>
+                        <p class="card-text">Join us for a fun and educational field trip to the zoo on September 10th.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-white bg-secondary">
+                    <div class="card-header">School Play</div>
+                    <div class="card-body">
+                        <h5 class="card-title">School Play Auditions</h5>
+                        <p class="card-text">Auditions for the annual school play will be held on September 15th.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-white bg-success">
+                    <div class="card-header">Sports Day</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Annual Sports Day</h5>
+                        <p class="card-text">Come cheer for our young athletes on Sports Day, September 20th.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-white bg-danger">
+                    <div class="card-header">Parent-Teacher Meeting</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Parent-Teacher Meetings</h5>
+                        <p class="card-text">Don't miss the Parent-Teacher meetings scheduled for September 25th.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card text-dark bg-warning">
+                    <div class="card-header">Holiday</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Holiday Announcement</h5>
+                        <p class="card-text">The school will be closed for a public holiday on October 1st.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-dark bg-info">
+                    <div class="card-header">Science Fair</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Science Fair</h5>
+                        <p class="card-text">Participate in our Science Fair on October 10th. Open to all grades.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-dark bg-light">
+                    <div class="card-header">Art Competition</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Art Competition</h5>
+                        <p class="card-text">Show off your artistic skills in the Art Competition on October 15th.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </div>
+    </div>
+</div>
+
 <script>
 document.querySelectorAll('.accordion-button').forEach(button => {
     button.addEventListener('click', () => {
@@ -593,58 +852,108 @@ document.querySelectorAll('.accordion-button').forEach(button => {
                     <p>Our school facilities offer a nurturing environment equipped to inspire and empower every student's journey to excellence..</p>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="facility-item">
-                            <div class="facility-icon bg-primary">
-                                <span class="bg-primary"></span>
-                                <i class="fa fa-bus-alt fa-3x text-primary"></i>
-                                <span class="bg-primary"></span>
-                            </div>
-                            <div class="facility-text bg-primary">
-                                <h3 class="text-primary mb-3">School Bus</h3>
-                                <p class="mb-0">Safely transporting young scholars on an enriching journey to knowledge and growth.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="facility-item">
-                            <div class="facility-icon bg-success">
-                                <span class="bg-success"></span>
-                                <i class="fa fa-futbol fa-3x text-success"></i>
-                                <span class="bg-success"></span>
-                            </div>
-                            <div class="facility-text bg-success">
-                                <h3 class="text-success mb-3">Playground</h3>
-                                <p class="mb-0">A dynamic space where laughter and learning intertwine, fostering physical health and social development.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="facility-item">
-                            <div class="facility-icon bg-warning">
-                                <span class="bg-warning"></span>
-                                <i class="fa fa-home fa-3x text-warning"></i>
-                                <span class="bg-warning"></span>
-                            </div>
-                            <div class="facility-text bg-warning">
-                                <h3 class="text-warning mb-3">Healthy Canteen</h3>
-                                <p class="mb-0">Nourishing minds and bodies with delicious, wholesome meals to fuel every student's potential.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="facility-item">
-                            <div class="facility-icon bg-info">
-                                <span class="bg-info"></span>
-                                <i class="fa fa-chalkboard-teacher fa-3x text-info"></i>
-                                <span class="bg-info"></span>
-                            </div>
-                            <div class="facility-text bg-info">
-                                <h3 class="text-info mb-3">Positive Learning</h3>
-                                <p class="mb-0">An expansive playground where imaginations soar and friendships blossom amidst the beauty of nature's classroom.</p>
-                            </div>
-                        </div>
-                    </div>
+         <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FF0000;
+            color: #483D8B;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-item {
+            background-color: transparent;
+            width: 200px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-item:hover {
+            transform: scale(1.05);
+            
+        }
+        .service-item .circle {
+            background-color: #8B0000;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+        .service-item .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .service-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .service-item {
+                width: 150px;
+                height: 200px;
+            }
+            .service-item .circle {
+                padding-bottom: 75%;
+            }
+            .service-title {
+                font-size: 12px;
+            }
+        }
+    </style>
+    <div class="services-container">
+        <div class="service-item">
+            <div class="circle">
+                <img src="https://images.unsplash.com/photo-1682795773426-f4e2e3e93288?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2Nob29sJTIwZmFjaWxpdHl8ZW58MHx8MHx8fDA%3D" alt="Representación de Audiencia">
+            </div>
+            <div class="service-title">REPRESENTACIÓN DE AUDIENCIA</div>
+        </div>
+        <div class="service-item">
+            <div class="circle">
+                <img src="https://images.unsplash.com/photo-1714192833473-3271b3561c95?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2Nob29sJTIwZmFjaWxpdHl8ZW58MHx8MHx8fDA%3D" alt="Imputación de Cargos">
+            </div>
+            <div class="service-title">IMPUTACIÓN DE CARGOS</div>
+        </div>
+        <div class="service-item">
+            <div class="circle">
+                <img src="https://media.istockphoto.com/id/1464533610/photo/sunny-elementary-campus.webp?b=1&s=170667a&w=0&k=20&c=37o7MmhuRKDeGtXKcv64JK5CgZE_sRfBBF7E5fYAISM=" alt="Legalización de Captura">
+            </div>
+            <div class="service-title">LEGALIZACIÓN DE CAPTURA</div>
+        </div>
+        <div class="service-item">
+            <div class="circle">
+                <img src="https://media.istockphoto.com/id/695604058/photo/many-activities.webp?b=1&s=170667a&w=0&k=20&c=gdtwA-Mw5n4W7tUM8TcuwHHu-QNHMwuwiBQIyM1RgrI=" alt="Lectura de Fallo">
+            </div>
+            <div class="service-title">LECTURA DE FALLO</div>
+        </div>
+        <div class="service-item">
+            <div class="circle">
+                <img src="https://plus.unsplash.com/premium_photo-1683535508537-7a900f63e5a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sJTIwbGlicmFyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Aplicación Recurso de Casos">
+            </div>
+            <div class="service-title">APLICACIÓN RECURSO DE CASOS</div>
+        </div>
+
+
+    </div>
                 </div>
             </div>
         </div>
@@ -658,7 +967,7 @@ document.querySelectorAll('.accordion-button').forEach(button => {
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
+                        <h1 class="mb-4">Our School kids Activities</h1>
                         <p>Dive deeper into our enriching educational journey by exploring the breadth and depth of our academic programs, extracurricular activities, and community engagements. With a focus on holistic development, we offer a diverse array of cultural activities that celebrate the rich tapestry of traditions and experiences within our school community.</p>
                         <p class="mb-4">From multicultural festivals to art exhibitions, music performances, and literary events, our cultural activities provide students with opportunities to cultivate empathy, respect, and appreciation for diverse perspectives.</p>
                         <div class="row g-4 align-items-center">
